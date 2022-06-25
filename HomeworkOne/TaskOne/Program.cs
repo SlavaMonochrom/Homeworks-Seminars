@@ -13,7 +13,6 @@ if(num1 > num2)
     Console.WriteLine("max = " + num1);
     Console.WriteLine("max = " + num2);
 }
-else if (num1 == num2)
-{
-        Console.WriteLine("числа равны");
-}
+else
+    Console.WriteLine("числа равны");
+
