@@ -1,11 +1,21 @@
 ﻿//принимает вход трёхзначное на выход вторaя цифра числа
+/*
 
-int cutNumber(num)
+int cutNumber(int a)
 {   
-    int num = new Random().Next(100,1000);
-    int ostat = num % 10;
-    int div = num / 10;
-    int result = num;
-    return result;
+    if(a<1000)
+        a = (a / 10) % 10;
+    else a = -1;    
+    return a;
 }
+
+Console.WriteLine("Input number: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(cutNumber(x));  
+
+*/
+
+//выводит третью цифру заданного числа
+
+
 
