@@ -14,8 +14,8 @@ Console.WriteLine(cutNumber(x));
 */
 
 //выводит - третью цифру числа, если его нет - ошибку.
-/*
-int threeDigit(int num)
+/* int threeDigit(int num)
+
 {  
     if (num <100) num = -1;
     else 
@@ -28,9 +28,17 @@ int threeDigit(int num)
 }
 Console.WriteLine("Input number: ");
 int number = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(threeDigit(number));  /*
+Console.WriteLine(threeDigit(number));  */
 
-// на вход день недели(число), и проверяет число(выходной) arg>5? как стринг придать цифры? какой метод
+// на вход (число) от юзера, на выход вых/не вых.
+/*void weekend(int day)
+{
+    if (day > 7) Console.WriteLine("Error ");
+    if (day < 6) Console.WriteLine("Weekdays");
+    else Console.WriteLine("Weekend");
+}
 
-
-
+Console.WriteLine("Input a day: ");
+int today = Convert.ToInt32(Console.ReadLine());
+weekend(today);
+*/
