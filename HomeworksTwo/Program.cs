@@ -1,7 +1,5 @@
-﻿//принимает вход трёхзначное на выход вторaя цифра числа
-/*
-
-int cutNumber(int a)
+﻿//принимает вход - трёхзначное, выход - вторaя цифра числа
+/* int cutNumber(int a)
 {   
     if(a<1000)
         a = (a / 10) % 10;
@@ -15,11 +13,9 @@ Console.WriteLine(cutNumber(x));
 
 */
 
-//выводит третью цифру числа, если его нет ошибку.
-
-
+//выводит - третью цифру числа, если его нет - ошибку.
+/*
 int threeDigit(int num)
-
 {  
     if (num <100) num = -1;
     else 
@@ -32,27 +28,9 @@ int threeDigit(int num)
 }
 Console.WriteLine("Input number: ");
 int number = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(threeDigit(number));
+Console.WriteLine(threeDigit(number));  /*
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    int count = 10;
-    if (num < 100) num = -1;
+// на вход день недели(число), и проверяет число(выходной) arg>5? как стринг придать цифры? какой метод
 
-    else num = (num / count) % 10;
-    return n }*/ 
 
 
