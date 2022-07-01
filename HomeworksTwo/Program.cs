@@ -9,13 +9,50 @@ int cutNumber(int a)
     return a;
 }
 
-Console.WriteLine("Input number: ");
+Console.WriteLine("Input threedigit number: ");
 int x = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(cutNumber(x));  
 
 */
 
-//выводит третью цифру заданного числа
+//выводит третью цифру числа, если его нет ошибку.
 
+
+int threeDigit(int num)
+
+{  
+    if (num <100) num = -1;
+    else 
+    { 
+	  while(num>=1000)
+        num = (num/10);
+        num = (num%10);
+    }
+    return num;
+}
+Console.WriteLine("Input number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(threeDigit(number));
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*
+    int count = 10;
+    if (num < 100) num = -1;
+
+    else num = (num / count) % 10;
+    return n }*/ 
 
 
