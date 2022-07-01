@@ -31,12 +31,13 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(threeDigit(number));  */
 
 // на вход (число) от юзера, на выход вых/не вых.
+
 /*void weekend(int day)
 {
-    if (day > 7) Console.WriteLine("Error ");
-    if (day < 6) Console.WriteLine("Weekdays");
-    else Console.WriteLine("Weekend");
+    if(day ==6 || day ==7) Console.WriteLine("Weekend");
+    else Console.WriteLine("Not Weekend");
 }
+
 
 Console.WriteLine("Input a day: ");
 int today = Convert.ToInt32(Console.ReadLine());
