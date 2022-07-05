@@ -21,3 +21,10 @@ Console.WriteLine("inpunt number ");
 int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(Summa(number));
 */
+
+
+//задаёт массив из m элементов и выводит их на экран.
+
+int[] array = new Random().Next(1, 10);
+
+Console.WriteLine(array);
