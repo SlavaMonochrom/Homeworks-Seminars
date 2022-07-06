@@ -25,6 +25,15 @@ Console.WriteLine(Summa(number));
 
 //задаёт массив из m элементов и выводит их на экран.
 
-int[] array = new Random().Next(1, 10);
+Console.WriteLine("Input elements digit : ");
+int digit = Convert.ToInt32(Console.ReadLine());
+int[] intArrayVarriable = new int[digit];
 
-Console.WriteLine(array);
+void PrintArray()
+{
+    
+
+}
+
+
+//int value = new Random().Next(1, 11);
