@@ -16,9 +16,11 @@ int Summa(int num)
     return sum;
 }
 
-int[] CreateArray(int size, int minValue, int maxValue) 
+int[] CreateArray(int size) 
 { 
-    int[] newArray = new int[size];  
+    int[] newArray = new int[size];
+    for(int i = 0; i < size; i++) 
+        newArray[i] = new Random().Next(5, 25);
     return newArray; 
 } 
 
@@ -30,18 +32,18 @@ void ShowArray(int[] array)
     Console.WriteLine(); 
 } 
  
+//Task1 на вход число и выдаёт сумму цифр в числе
+/*
+Console.WriteLine("inpunt number ");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Summa(number));
+*/
+
 
 //Task2 задаёт массив из m элементов и выводит их на экран.
-
+/*
 Console.Write("Input size of array: "); 
 int  size = Convert.ToInt32(Console.ReadLine());
 int[] array = CreateArray(size);
 ShowArray(array);
-
-/* Task1 на вход число и выдаёт сумму цифр в числе
-
-Console.WriteLine("inpunt number ");
-int number = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(Summa(number)); */
-
-
+*/
