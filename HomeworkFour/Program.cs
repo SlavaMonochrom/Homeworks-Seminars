@@ -1,6 +1,5 @@
-﻿//на вход число и выдаёт сумму цифр в числе
-
-/*int Summa(int num)
+﻿
+int Summa(int num)
 {
     int sum = 0;
 
@@ -17,29 +16,32 @@
     return sum;
 }
 
+int[] CreateArray(int size, int minValue, int maxValue) 
+{ 
+    int[] newArray = new int[size];  
+    return newArray; 
+} 
+
+void ShowArray(int[] array) 
+{ 
+    for(int i = 0; i < array.Length; i++) 
+        Console.Write(array[i] + " "); 
+ 
+    Console.WriteLine(); 
+} 
+ 
+
+//Task2 задаёт массив из m элементов и выводит их на экран.
+
+Console.Write("Input size of array: "); 
+int  size = Convert.ToInt32(Console.ReadLine());
+int[] array = CreateArray(size);
+ShowArray(array);
+
+/* Task1 на вход число и выдаёт сумму цифр в числе
+
 Console.WriteLine("inpunt number ");
 int number = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(Summa(number));
-*/
+Console.WriteLine(Summa(number)); */
 
-
-//задаёт массив из m элементов и выводит их на экран.
-
-Console.WriteLine("Input elements digit : ");
-int digit = Convert.ToInt32(Console.ReadLine());
-int[] intArrayVarriable = new int[digit];
-
-
-void PrintArray(int[]array)   //??? это внос в индекс или в весь массив? 
-{   
-    int count = 0;
-    int m = array.Length;
-    while(m<=count)
-    {
-        int  = new Random().Next(1,10); // как обозначить нулевой индекс массива без указания оного ? 
-        count++;
-    }
-    Console.WriteLine(array); // как правильно вывести в консоль? 
-}
-PrintArray(int []digit); // Как правильно обратиться к методу? 
 
