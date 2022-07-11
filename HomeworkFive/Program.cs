@@ -17,7 +17,7 @@ int evenArray (int[]array)
         if (array[i] % 2 == 0) sumDigits++;
     return sumDigits;
 }    
- 
+
 int unevenArray(int[] array)
 {
     int sum = 0;
