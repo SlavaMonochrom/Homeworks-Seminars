@@ -30,7 +30,7 @@ double diffMaxMin(double[] array) // разность между макс и м�
     return dif;
 }
 
-void ShowArray(int[] array) // для натуральных (попытки провести два аргумента int[]array и double[]array- неудачно)
+void ShowArray(int[] array) // для натуральных (попытки провести два аргумента int[]array и double[]array-for не даст)
 
 {
     for (int i = 0; i < array.Length; i++)
@@ -44,14 +44,15 @@ void Showarray(double[] array) // для вещественных
 }
 
 
-int evenArray(int[] array)
+int evenArray(int[] array)  // четные
 {
     int sumDigits = 0;
     for (int i = 0; i < array.Length; i++)
         if (array[i] % 2 == 0) sumDigits++;
     return sumDigits;
 }
-int unevenArray(int[] array)
+
+int unevenArray(int[] array) // сумма на нечетных i
 {
     int sum = 0;
     for (int i = 1; i < array.Length; i++)
@@ -68,13 +69,15 @@ ShowArray(array);
 Console.WriteLine();
 int EvenDigits = evenArray(array);
 Console.WriteLine($"even digits: {EvenDigits}");
+*/
 
+/*
 // Task2 Найдите сумму элементов, стоящих на нечётных позициях.
 int SumUnevenIndex = unevenArray(array);
 Console.WriteLine($"Sum UnvenIndex: {SumUnevenIndex}");
 */
 
-
+/*
 // Task3 массив вещественных чисел. Найдите разницу между максимальным и минимальным элементом.
 Console.WriteLine("Input size massive: ");
 int Size = Convert.ToInt32(Console.ReadLine());
@@ -83,3 +86,5 @@ Showarray(array);
 Console.WriteLine();
 double dif = diffMaxMin(array);
 Console.WriteLine($"Difference : {dif}");
+
+*/
