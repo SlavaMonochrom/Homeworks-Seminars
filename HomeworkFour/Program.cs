@@ -39,7 +39,6 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(Summa(number));
 */
 
-
 //Task2 задаёт массив из m элементов и выводит их на экран.
 /*
 Console.Write("Input size of array: "); 
