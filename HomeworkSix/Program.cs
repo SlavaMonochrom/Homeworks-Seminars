@@ -22,7 +22,32 @@ void ShowArray(int[]newArray)
         Console.WriteLine();
 } 
 
+int intersection (int x, int y)
+{
+Console.WriteLine("input b1 ");
+int b1 = Console.ReadLine();
+Console.WriteLine("input b2");
+int b2 = Console.ReadLine();
+Console.WriteLine("input k1");
+int k1 = Console.ReadLine();
+Console.WriteLine("input k2");
+int k2 = Console.ReadLine();
+
+    int x = (b2-b1)/(k1/k2);
+    int y = k1*x+b1;
+}
+
+int x = Convert.ToInt32(Console.ReadLine());
+int y = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(intersection(x,y));
+
+
 //Task1 ввод с клавиатуры M чисел. Cколько чисел больше 0 ввёл пользователь.
+/*
 Console.WriteLine("Input size array: ");
 int size = Console.ReadLine();
 int[] CreateArray(size);
+
+*/
+
+//
