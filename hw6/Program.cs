@@ -16,17 +16,17 @@ void ShowArray(int[] newArray)
     for (int i = 0; i < newArray.Length; i++)
     {
         Console.Write($"{newArray[i]} ");
-         
+
     }
-    Console.WriteLine();   
+    Console.WriteLine();
 }
 
-void sumPositiveCells(int[]array)
+int sumPositiveCells(int[] array)
 {
-int sum = 0;
-       for(int i = 0; i<array.Length; i++)
+    int sum = 0;
+    for (int i = 0; i < array.Length; i++)
         if (array[i] > 0) sum++;
-Console.WriteLine($"Sum positive:{sum}");
+    return sum;
 }
 
 int intersection(int k1, int k2, int b1, int b2)
@@ -36,17 +36,17 @@ int intersection(int k1, int k2, int b1, int b2)
 }
 
 //Task1 
+
 Console.Write("iputs elements array: ");
 int size = Convert.ToInt32(Console.ReadLine());
 int[] arrayOne = CreateArray(size);
 ShowArray(arrayOne);
-sumPositiveCells(arrayOne);
-
-//int sum = sumPositiveCells(arrayOne);
-//Console.WriteLine(sum);
+int sum = sumPositiveCells(arrayOne);
+Console.WriteLine($"Sum Positive Elemets: {sumPositiveCells(arrayOne)}");
 
 //Task2
 /*
+
 Console.WriteLine("input k1: ");
 int k1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("input k2: ");
