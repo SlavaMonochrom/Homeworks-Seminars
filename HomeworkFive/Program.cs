@@ -15,7 +15,6 @@ double[] DoubleArray(int Size)  //создание массива веществ
     }
     return Doublearray;
 }
-
 double diffMaxMin(double[] array) // разность между макс и мин
 {
     double min = array[0];
