@@ -29,13 +29,11 @@ int sum = 0;
 Console.WriteLine($"Sum positive:{sum}");
 }
 
-
 int intersection(int k1, int k2, int b1, int b2)
 {
     int x = (b2 - b1) / (k1 - k2);
     return x;
 }
-
 
 //Task1 
 Console.Write("iputs elements array: ");
