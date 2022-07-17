@@ -1,63 +1,51 @@
 ﻿
-int[] CreateArray(int size)
+double[,] CreateArray(int rows, int collums)
 {
-    int[] newArray = new int[size];
-
-    for (int i = 0; i < size; i++)
-    {
-        Console.WriteLine($"Input {i + 1} element: ");
-        newArray[i] = Convert.ToInt32(Console.ReadLine());
+    double[,] newArray = new double[rows, collums];
+    Random random = new Random();
+    for (int i = 0; i < newArray.GetLength(0); i++)
+            for (int j = 0; j < newArray.GetLength(1); j++)
+    newArray[i, j] = Random.NextDouble();
     }
     return newArray;
 }
 
-void ShowArray(int[] newArray)
+/*
+Void Show2dArray(double[,] newArray)
 {
-    for (int i = 0; i < newArray.Length; i++)
+    for (int i = 0; i < newArray.GetLength(0); i++)
     {
-        Console.Write($"{newArray[i]} ");
+        for (int j = 0; j < newArray.GetLength(1); j++)
+            Console.Write(newArray[i, j] + " ");
 
+        Console.WriteLine();
+    }
+}
+
+
+Console.WriteLine("Input m: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input n: ");
+int collums = Convert.ToInt32(Console.ReadLine());
+double[,] array = CreateArray(rows, collums);
+*/
+//Show2dArray(array);
+
+//Task1 двумерный массив размером m×n, заполненный случайными вещественными числами
+
+
+
+
+
+double[,] array = new double[5, 10];
+
+Random random = new Random();
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 10; j++)
+    {
+        array[i, j] = random.NextDouble()*100; // NextDouble() дает случайное вещественное число в диапазоне от 0 до 1
+        Console.Write($"{array[i, j]}");
     }
     Console.WriteLine();
 }
-
-int sumPositiveCells(int[] array)
-{
-    int sum = 0;
-    for (int i = 0; i < array.Length; i++)
-        if (array[i] > 0) sum++;
-    return sum;
-}
-
-int intersection(int k1, int k2, int b1, int b2)
-{
-    int x = (b2 - b1) / (k1 - k2);
-    return x;
-}
-
-//Task1 
-
-Console.Write("iputs elements array: ");
-int size = Convert.ToInt32(Console.ReadLine());
-int[] arrayOne = CreateArray(size);
-ShowArray(arrayOne);
-int sum = sumPositiveCells(arrayOne);
-Console.WriteLine($"Sum Positive Elemets: {sumPositiveCells(arrayOne)}");
-
-//Task2
-/*
-
-Console.WriteLine("input k1: ");
-int k1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("input k2: ");
-int k2 = Convert.ToInt32(Console.ReadLine());
-if (k1 == k2) Console.WriteLine("Паралельны");
-else
-    Console.WriteLine("input b1");
-    int b1 = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("input b2");
-    int b2 = Convert.ToInt32(Console.ReadLine());
-int x = intersection(k1, k2, b1, b2);
-int y = k1 * x + b1;
-Console.WriteLine($" точка пересечения: {x}, {y}");
-*/
