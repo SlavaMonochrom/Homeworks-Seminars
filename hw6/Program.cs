@@ -46,7 +46,6 @@ Console.WriteLine($"Sum Positive Elemets: {sumPositiveCells(arrayOne)}");
 
 //Task2
 /*
-
 Console.WriteLine("input k1: ");
 int k1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("input k2: ");
