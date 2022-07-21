@@ -38,7 +38,7 @@ void ShowArray(int[,] array)
         Console.WriteLine();
     }
 }
-
+/*
 void FindElement(int[,] myArray)
 {
 
@@ -47,16 +47,35 @@ void FindElement(int[,] myArray)
     for (int i = 0; i < myArray.GetLength(0); i++)
 
         for (int j = 0; j < myArray.GetLength(1); j++)
-
-            if (m < myArray.GetLength(0) && n < myArray.GetLength(1))
+        {
+        if (m < myArray.GetLength(0) && n < myArray.GetLength(1))
                 myArray[i,j] = myArray[m,n];
                 Console.WriteLine ($"Элемент равен: {myArray[m,n]}");
             else 
             {
                 Console.WriteLine($"такого элемента не сущетсвует");
             }
-
+        }
 }
+*/
+void averageColumns(int[,] myArray)
+{
+    int[] sum = new int[myArray.GetLength(1)];
+
+    for (int j = 0; j < myArray.GetLength(0); j++)
+    {
+        for (int i = 0; i < myArray.GetLength(1); i++)
+        {
+            sum[j] = sum[j] + myArray[i, j];
+        }
+        sum[j] = sum[j] / myArray.GetLength(1);
+         Console.WriteLine ($"Average: {sum[j]} ");
+    }
+}
+
+
+
+
 
 //Task1 
 Console.WriteLine("Input m: ");
@@ -72,15 +91,21 @@ int max = Convert.ToInt32(Console.ReadLine());
 
 
 
-//Task2 на вход позиции элемента в array. возвращает значение элемента или "элемента нет"
+//Task2 на вход позиции элемента в array. возвращает элемент или "элемента нет"
 
 int[,] myArray = CreateRandonArray(rows, collums, min, max);
 ShowArray(myArray);
-
+/*
 Console.WriteLine("Input position in rows: ");
 int  = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input position in columns: ");
 int  = Convert.ToInt32(Console.ReadLine());
-
 //Console.WriteLine("Input Rows: ");
 
+
+
+Console.WriteLine($"Element index value [{a},{b}]: {PositionSearch(myArray, a, b)}");
+*/
+
+//Task3. среднее арифметическое элементов в каждом столбце.
+averageColumns(myArray);
