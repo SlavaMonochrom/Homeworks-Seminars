@@ -74,9 +74,6 @@ void averageColumns(int[,] myArray)
 }
 
 
-
-
-
 //Task1 
 Console.WriteLine("Input m: ");
 int rows = Convert.ToInt32(Console.ReadLine());
@@ -90,20 +87,16 @@ int max = Convert.ToInt32(Console.ReadLine());
 //Show2dArray(array);
 
 
-
 //Task2 на вход позиции элемента в array. возвращает элемент или "элемента нет"
-
 int[,] myArray = CreateRandonArray(rows, collums, min, max);
 ShowArray(myArray);
 /*
 Console.WriteLine("Input position in rows: ");
-int  = Convert.ToInt32(Console.ReadLine());
+int x = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input position in columns: ");
-int  = Convert.ToInt32(Console.ReadLine());
+int y = Convert.ToInt32(Console.ReadLine());
+
 //Console.WriteLine("Input Rows: ");
-
-
-
 Console.WriteLine($"Element index value [{a},{b}]: {PositionSearch(myArray, a, b)}");
 */
 
