@@ -18,52 +18,69 @@ void Show2dArray(double[,] newArray)
     }
 }
 
-int[,] ArrayRandom(int rows, int collums)
+int[,] CreateRandonArray(int rows, int collums, int minValue, int maxValue)
 {
-    int[,] array = new int[rows, collums];
+    int[,] newArray = new int[rows, collums];
+
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < collums; j++)
-            array[i, j] = new Random().Next(5, 25);
-    return array;
+            newArray[i, j] = new Random().Next(minValue, maxValue + 1);
+    return newArray;
 }
 
-void ShowArray(int[,] myArray)
+void ShowArray(int[,] array)
 {
-    for (int i = 0; i < myArray.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++) // 0 - строка
     {
-        for (int j = 0; j < myArray.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)  // .GetLenth(1) - столбец для многомерных массивов 
+            Console.Write(array[i, j] + " ");
 
-            Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
-int[,] FindElement (int[,]myArray)
+void FindElement(int[,] myArray)
 {
-int count = 0;
-int position1 = 0;
-int p2 = 0;
-Console.WriteLine("Input position in rows: ");
-position1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input position in columns: ");
-p2 = Convert.ToInt32(Console.ReadLine());
-for (int i = 0; i <myArray.GetLength(0) i++)
-    if (myArray[i] == position1)
-        Console.WriteLine();
+
+    int m = 0;
+    int n = 0;
+    for (int i = 0; i < myArray.GetLength(0); i++)
+
         for (int j = 0; j < myArray.GetLength(1); j++)
-            if(myArray[j] == p2);
+
+            if (m < myArray.GetLength(0) && n < myArray.GetLength(1))
+                myArray[i,j] = myArray[m,n];
+                Console.WriteLine ($"Элемент равен: {myArray[m,n]}");
+            else 
+            {
+                Console.WriteLine($"такого элемента не сущетсвует");
+            }
 
 }
+
 //Task1 
 Console.WriteLine("Input m: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input n: ");
 int collums = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input min possible value: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input max possible value: ");
+int max = Convert.ToInt32(Console.ReadLine());
 //double[,] array = CreateArray(rows, collums);
 //Show2dArray(array);
 
+
+
 //Task2 на вход позиции элемента в array. возвращает значение элемента или "элемента нет"
 
-int[,] myArray = ArrayRandom(rows, collums);
+int[,] myArray = CreateRandonArray(rows, collums, min, max);
 ShowArray(myArray);
-Console.WriteLine("Input Rows: ");
+
+Console.WriteLine("Input position in rows: ");
+int  = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input position in columns: ");
+int  = Convert.ToInt32(Console.ReadLine());
+
+//Console.WriteLine("Input Rows: ");
 
