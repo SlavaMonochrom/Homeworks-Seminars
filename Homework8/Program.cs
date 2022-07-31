@@ -65,7 +65,58 @@ int SummaMinRows(double[,] array)
     return minimum + 1;
 }
 
+int[,] CreateSpiral(int[,]array)
+{
+    int x = array.GetLength(1)-1;
+    int y = array.GetLength(0)-1;
+    int a = 0;
+    int b = 0;
+    int current = 1;
+    int sum = array.GetLength(0)*array.GetLength(1);
 
+    for(int j = 0; j<sum;j++)
+    {
+        for (int i = b; i < x; i++)
+        {
+            array[a, i] = current;
+            current++;
+            if (current > sum) return array;
+        }
+        for (int i = b; i < y; i++)
+        {   
+        array[i,x] = current;
+        current++;
+        if(current>sum) return array;
+        }
+        for (int i = x; i > b; i--)
+        {
+        array[i, a] = current;
+        current++;
+        if(current>sum) return array;
+        }
+        if (current == sum)
+        {
+        array[array.GetLength(0) /2, array.GetLength(1)/2] = current;
+        return array; 
+        }
+        x--;
+        y--;
+        a++;
+        b++;
+    }    
+    return array;
+}
+
+void Print2DArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i, j] + " ");
+        Console.WriteLine();
+    }
+}
+/*
 Console.Write("Input rows: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input columns: ");
@@ -75,16 +126,20 @@ double[,] myArray = Create2DArray(rows,columns);
 Prind2DArray(myArray);
 Console.WriteLine();
 
-/*Task54
-Prind2DArray(SortMinMaxRows(myArray)); */
+Task54
+Prind2DArray(SortMinMaxRows(myArray));
 
 /*прямоугольный двумерный массив + находить строку сменьшей суммой элементов.*/
 
-/*Task56*/
+/*Task56
 double result = SummaMinRows(myArray);
-Console.WriteLine("Наименьшая сумма в строке под номером:" + result);
+Console.WriteLine("Наименьшая сумма в строке под номером:" + result);*/
 
+/*Task 62 Заполните спирально массив 4 на 4.*/
 
+int[,] myArray = new int[4,4];
+Console.WriteLine();
+Print2DArray(CreateSpiral(myArray));
 
 
 
